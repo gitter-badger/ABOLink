@@ -23,7 +23,7 @@
         
         <div id="block-1">
             <!-- Код вывода блока для ссылки
-            ---- Вызов функции ABOLink с параметром 'ANCOR' -->
+                 Вызов функции ABOLink с параметром 'ANCOR' -->
             <?php ABOLink('ANCOR'); ?>
         </div>
 
@@ -33,7 +33,7 @@
         
         <div id="block-2">
             <!-- Код вывода блока для баннера
-            ---- Вызов функции ABOLink с параметром 'BANNER' -->
+            -    Вызов функции ABOLink с параметром 'BANNER' -->
             <?php ABOLink('BANNER'); ?>
         </div>
        
