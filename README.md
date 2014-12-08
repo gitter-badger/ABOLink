@@ -19,7 +19,7 @@ ABOLink - Руководство
 Установите данный код перед выводом HTML кода ссылки или баннера:
 ```php
 <?php
-include(dirname(__FILE__)."/ABOLink/ABOLink.php");
+    include(dirname(__FILE__)."/ABOLink/ABOLink.php");
 ?>
 ```
 
@@ -31,7 +31,7 @@ include(dirname(__FILE__)."/ABOLink/ABOLink.php");
 В ответ на сайт партнера будет возвращено HTML код ссылки. Пример:
 ```html
 <a href="http://abo.ua/instrument/" title="Инструмент" target="_blank">
-  Инструмент
+    Инструмент
 </a>
 ```
 - Для вывода банера скрипта `ABOLink`, необходимо в блок установить следующий PHP код:
@@ -41,7 +41,7 @@ include(dirname(__FILE__)."/ABOLink/ABOLink.php");
 В ответ на сайт партнера будет возвращено HTML код баннера. Пример:
 ```html
 <a href="http://abo.ua/instrument/" title="Инструмент" target="_blank">
-  <img src="http://firepic.org/images/2014-09/05/6pxv59onm2ph.jpg" alt="Инструмент"/>
+    <img src="http://firepic.org/images/2014-09/05/6pxv59onm2ph.jpg" alt="Инструмент"/>
 </a>
 ```
 - Размер картинки баннера и максимальное количество символов ссылки оговаривается с СЕО-специалистом для каждого партнерского сайта.
