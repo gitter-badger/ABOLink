@@ -33,7 +33,7 @@
         
         <div id="block-2">
             <!-- Код вывода блока для баннера
-            -    Вызов функции ABOLink с параметром 'BANNER' -->
+                 Вызов функции ABOLink с параметром 'BANNER' -->
             <?php ABOLink('BANNER'); ?>
         </div>
        
