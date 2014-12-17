@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Abolink by PauleHan</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Abolink</h1>
+        <p>ABOLink</p>
+
+        <p class="view"><a href="https://github.com/PauleHan/ABOLink">View the Project on GitHub <small>PauleHan/ABOLink</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/PauleHan/ABOLink/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/PauleHan/ABOLink/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/PauleHan/ABOLink">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="abolink---Руководство" class="anchor" href="#abolink---%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>ABOLink - Руководство</h1>
+
+<h6>
+<a id="Постоянный-адрес-документации-bitlyabolink" class="anchor" href="#%D0%9F%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B0%D0%B4%D1%80%D0%B5%D1%81-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8-bitlyabolink" aria-hidden="true"><span class="octicon octicon-link"></span></a>Постоянный адрес документации: <a href="https://bit.ly/ABOLink">bit.ly/ABOLink</a>
+</h6>
+
+<h4>
+<a id="Описание" class="anchor" href="#%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Описание</h4>
+
+<ul>
+<li>Скрипт <code>ABOLink</code> возвращает HTML код ссылки и баннера для партнерского сайта.</li>
+<li>Использование ссылки и/или баннера на партнерском сайте оговаривается с ведущим <strong>СЕО-специалистом</strong> компании ABO. Так как, может для партнера быть предоставлено только передача HTML кода ссылки или баннера.</li>
+<li>Для каждой страницы партнерского сайта передаются значения ссылки и/или баннера. Также, эти значения могут изменятся на одной странице при каждом ее вызове.</li>
+<li>Полученный  HTML код не имеет стилей, классов (CSS) и прочих атрибутов кроме всплывающей подсказки (alt, title). По желанию партнера, может быть добавлен атрибут <code>REL</code> со значением <code>NOFOLLOW</code>.</li>
+<li>Кэшировать данные скрипта <code>ABOLink</code> более 1 секунды <strong>запрещается</strong>
+</li>
+</ul>
+
+<h4>
+<a id="Требования" class="anchor" href="#%D0%A2%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Требования</h4>
+
+<ul>
+<li><strong>PHP 4 &gt;= 4.3, PHP 5</strong></li>
+<li>Наличие на сервере библиотеки <code>php_curl.dll</code> Описание <a href="http://www.php.su/articles/?cat=protocols&amp;page=004">libcurl</a>
+</li>
+</ul>
+
+<h4>
+<a id="Установка" class="anchor" href="#%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Установка</h4>
+
+<ul>
+<li>Распакуйте архив в корневой директории сайта. Как правило, это папка с именем: <code>/public_html</code>, <code>/www</code> или с именем домена сайта.</li>
+<li>На странице (в блоке) вывода HTML кода необходимо подключить скрипт ABOLink с помощью PHP конструкции <code>include()</code>;
+Установите данный код перед выводом HTML кода ссылки или баннера:</li>
+</ul>
+
+<div class="highlight highlight-php"><pre><span class="pl-pse">&lt;?php</span><span class="pl-s2"></span>
+<span class="pl-s2">    <span class="pl-k">include</span>(<span class="pl-s3">dirname</span>(<span class="pl-c1">__FILE__</span>)<span class="pl-k">.</span><span class="pl-s1"><span class="pl-pds">"</span>/ABOLink/ABOLink.php<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s2"></span><span class="pl-pse"><span class="pl-s2">?</span>&gt;</span></pre></div>
+
+<h4>
+<a id="Вывод-данных" class="anchor" href="#%D0%92%D1%8B%D0%B2%D0%BE%D0%B4-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Вывод данных</h4>
+
+<ul>
+<li>Для вывода ссылки скрипта <code>ABOLink</code>, необходимо в блок установить следующий PHP код:</li>
+</ul>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-k">&lt;</span>?<span class="pl-c1">php</span> ABOLink(<span class="pl-s1"><span class="pl-pds">'</span>ANCOR<span class="pl-pds">'</span></span>); </span><span class="pl-pse"><span class="pl-s2">?</span>&gt;</span></pre></div>
+
+<p>В ответ на сайт партнера будет возвращено HTML код ссылки. Пример:</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://abo.ua/instrument/<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s1"><span class="pl-pds">"</span>Инструмент<span class="pl-pds">"</span></span> <span class="pl-e">target</span>=<span class="pl-s1"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;
+    Инструмент
+&lt;/<span class="pl-ent">a</span>&gt;</pre></div>
+
+<ul>
+<li>Для вывода банера скрипта <code>ABOLink</code>, необходимо в блок установить следующий PHP код:</li>
+</ul>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-k">&lt;</span>?<span class="pl-c1">php</span> ABOLink(<span class="pl-s1"><span class="pl-pds">'</span>BANNER<span class="pl-pds">'</span></span>); </span><span class="pl-pse"><span class="pl-s2">?</span>&gt;</span></pre></div>
+
+<p>В ответ на сайт партнера будет возвращено HTML код баннера. Пример:</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://abo.ua/instrument/<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s1"><span class="pl-pds">"</span>Инструмент<span class="pl-pds">"</span></span> <span class="pl-e">target</span>=<span class="pl-s1"><span class="pl-pds">"</span>_blank<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://firepic.org/images/2014-09/05/6pxv59onm2ph.jpg<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s1"><span class="pl-pds">"</span>Инструмент<span class="pl-pds">"</span></span>/&gt;
+&lt;/<span class="pl-ent">a</span>&gt;</pre></div>
+
+<ul>
+<li>Размер картинки баннера и максимальное количество символов ссылки оговаривается с СЕО-специалистом для каждого партнерского сайта.</li>
+<li>Все картинки баннеров хранятся во внешних (облачных) хранилищах.</li>
+<li>Если для партнерского сайта не предусмотрено размещение баннера или ссылки код ABOLink вернет пустоту “ ”.</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/PauleHan">PauleHan</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
