@@ -1,6 +1,6 @@
 ABOLink v.1.02 - Руководство
 =======
-###### Постоянный адрес документации: [bit.ly/ABOLink](https://bit.ly/ABOLink)
+###### Постоянный адрес документации: [paulehan.github.io/ABOLink/](http://paulehan.github.io/ABOLink/)
 
 #### Описание
 - Скрипт `ABOLink` возвращает HTML код ссылки и баннера для партнерского сайта.
