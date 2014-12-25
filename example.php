@@ -14,7 +14,7 @@
         // Папка ABOLink должна быть расположена в корне сайта
         // ABOLink - Руководство https://bit.ly/ABOLink
 
-            include(dirname(__FILE__)."/ABOLink/ABOLink.php");
+            include("ABOLink/ABOLink.php");
         ?>
         
 
