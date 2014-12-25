@@ -1,4 +1,4 @@
-ABOLink - Руководство
+ABOLink v.1.02 - Руководство
 =======
 ###### Постоянный адрес документации: [bit.ly/ABOLink](https://bit.ly/ABOLink)
 
@@ -19,7 +19,7 @@ ABOLink - Руководство
 Установите данный код перед выводом HTML кода ссылки или баннера:
 ```php
 <?php
-    include(dirname(__FILE__)."/ABOLink/ABOLink.php");
+    include("ABOLink/ABOLink.php");
 ?>
 ```
 
