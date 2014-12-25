@@ -3,7 +3,7 @@
 // Папка ABOLink должна быть расположена в корне сайта
 // ABOLink - Руководство https://bit.ly/ABOLink
 
-function ABOLink($param){
+function ABOLink($param, $charset=false) {
     
     $url = urlencode($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
     $dir = 'http://cdn.abo.ua/?url=';
@@ -28,7 +28,7 @@ function ABOLink($param){
         $result = 'Not exist curl_init.';
     }
 
-    echo $result;
+    echo ($charset) ? iconv('UTF-8', $charset, $result) : $result;
 }
 
 ?>
